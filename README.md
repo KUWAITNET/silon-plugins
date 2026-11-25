@@ -2,7 +2,7 @@
 
 The **Silon Install** skill helps you set up a self-hosted Silon messaging server on Google Cloud, AWS, Azure, or an existing Linux VM. It helps you choose the installation path, prepare the deployment, and finish first-owner setup. It supports agent trials and purchased Silon licences. Cloud infrastructure is billed by your provider, including during a trial.
 
-Start with “Plan a Silon trial on Google Cloud without creating resources yet.” In a chat session, the skill can prepare a browser link or commands you can run. With a terminal you authorise, it can use your existing cloud sign-in to run the Silon CLI. You complete first-owner setup and trial activation in your browser.
+Start with “Plan a Silon trial on Google Cloud without creating resources yet.” In a chat session, the skill can prepare commands to run in Cloud Shell or over SSH. With a terminal you authorise, it can use your existing cloud sign-in to run the Silon CLI. You complete first-owner setup and trial activation in your browser.
 
 The plugin also includes **Silon API Docs**, a public MCP connector for the API reference and SDK guides. Try “Find the Silon API documentation and a Python example for sending a message.” The connector reads public docs and requires no account or API key.
 

@@ -17,10 +17,6 @@ Use `aws` or `azure` and the corresponding provider flags for those clouds. For 
 
 When an agent runs a deploy over a short-lived shell connection, start it with `nohup`, redirect both output streams to a fresh log in a private directory, and follow that log. A normal run can take around ten minutes and longer with Cloud SQL. A `links` event includes the setup and activation links and can arrive before `done`. The DNS step shows the A record to create for a domain unless DNS was set up through `-dns-zone`. Use DNS-only mode for a Cloudflare A record during certificate issuance. `done` means the install is ready. DNS and the certificate may still be pending.
 
-## Google Cloud browser handoff
-
-For a trial with the bundled database, check whether [Silon's Google Cloud deployment page](https://silon.tech/o/deploy/gcp/) is available. If it is, provide a link with the known values as URL-encoded fragment parameters. For example, `https://silon.tech/o/deploy/gcp/#host=chat.example.com&project=my-project&zone=europe-west1-b`. Omit unknown values and allow the user to enter their email on the page. The user signs in to Google and confirms resource creation. The page shows the assigned IP and the private setup and activation links. If the page is unavailable or the deployment needs CLI-specific options, use the Cloud Shell handoff.
-
 ## Existing Linux VM
 
 On the target VM, have Docker Engine 24+ and Compose 2.24+ available and make ports 80 and 443 reachable. Download the on-prem bootstrap from `https://get.silon.tech/install.sh`. After review and authorisation, run the saved script with `sudo env SILON_HOME=/opt/silon sh ./silon-bootstrap.sh` if it was saved as `silon-bootstrap.sh`. Use `sudo /opt/silon/bin/silon -C /opt/silon install -y -agent-trial -host chat.example.com -email ops@example.com` with the actual user values.
