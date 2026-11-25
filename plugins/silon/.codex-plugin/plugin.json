@@ -1,6 +1,6 @@
 {
   "name": "silon",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "description": "Install self-hosted Silon and search the Silon API reference and SDK guides.",
   "author": {
     "name": "KUWAITNET"
@@ -71,7 +71,7 @@
         }
       },
       "publication": {
-        "release_notes": "Uses an available interactive browser to operate Cloud Shell before offering a manual handoff."
+        "release_notes": "Explains how to finish deployment in the user's own browser when the agent's Cloud Shell access is blocked."
       }
     }
   }

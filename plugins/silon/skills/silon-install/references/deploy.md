@@ -6,6 +6,8 @@ Substitute the user's actual hostname, email, and provider destination. Keep exa
 
 Use the cloud's authenticated CLI on a laptop or in its browser shell. The browser shells are [Google Cloud Shell](https://shell.cloud.google.com), [AWS CloudShell](https://console.aws.amazon.com/cloudshell), and [Azure Cloud Shell](https://shell.azure.com). If needed, the official CLI bootstrap is `https://get.silon.tech/go/install-cli.sh`. It installs to `~/.local/bin` for a regular user and `/usr/local/bin` for root. Add the applicable directory to `PATH` if needed.
 
+If the agent's browser gets an access error, direct the user to [Google Cloud Shell](https://shell.cloud.google.com/) in their own browser. Google preinstalls `gcloud` there. Have them sign in, select the intended project, and approve Google's Cloud Shell authorisation prompt if shown. Check the active project in that shell before deployment. The Silon bootstrap and deployment commands run inside Cloud Shell.
+
 The default VM has 2 vCPU, 8 GB RAM, and a 50 GB disk. The deployment creates a static IP and opens ports 80 and 443. Use `-project` and `-zone` for Google Cloud, `-region` for AWS, or `-location` and optionally `-resource-group` for Azure. Verify the active identity and subscription or AWS account in the provider CLI. For an example plan on Google Cloud, after the cost is approved, run the following with the user's values.
 
 ```sh
