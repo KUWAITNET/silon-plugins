@@ -1,35 +1,77 @@
 {
   "name": "silon",
-  "version": "1.1.0",
-  "description": "Install self-hosted Silon on a cloud VM or an existing Linux server.",
+  "version": "1.2.0",
+  "description": "Install self-hosted Silon and search the Silon API reference and SDK guides.",
   "author": {
     "name": "KUWAITNET"
   },
   "homepage": "https://silon.tech",
   "repository": "https://github.com/KUWAITNET/silon-plugins",
   "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
   "interface": {
     "displayName": "Silon",
-    "shortDescription": "Install self-hosted Silon",
-    "longDescription": "Plan or install Silon on Google Cloud, AWS, Azure, or an existing Linux server. The skill prepares the appropriate installation steps and, in an authorised terminal, can run the Silon CLI after the user approves billable resources. Chat sessions without access to the target can hand off to Silon's Google Cloud deployment page or prepare commands for the user. The owner completes account setup and trial activation.",
+    "shortDescription": "Install Silon and use its API",
+    "longDescription": "Plan or install Silon on Google Cloud, AWS, Azure, or an existing Linux server. The installation skill can prepare a browser or Cloud Shell handoff, or run the Silon CLI in an authorised terminal after the user approves billable resources. The bundled public documentation connector searches the Silon API reference and finds SDK examples. It only reads public documentation and requires no Silon account or API key.",
     "developerName": "KUWAITNET",
     "category": "Developer Tools",
-    "capabilities": ["Plan a Silon deployment", "Guide owner setup"],
+    "capabilities": ["Plan a Silon deployment", "Guide owner setup", "Search Silon API documentation", "Find Silon SDK examples"],
     "websiteURL": "https://silon.tech/",
     "supportURL": "https://online.kuwaitnet.com/submitticket.php",
     "privacyPolicyURL": "https://silon.tech/privacy-policy/",
     "defaultPrompt": [
       "Plan a Silon trial on Google Cloud without creating resources yet.",
       "Walk me through installing Silon on my existing Linux server.",
-      "Prepare the AWS CloudShell commands for a Silon trial."
+      "Find the Silon API documentation and a Python example for sending a message."
     ],
     "logo": "./assets/icon.png",
     "composerIcon": "./assets/icon.png"
   },
   "extensions": {
     "com.openai": {
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "Discover the documentation connector",
+              "prompt": "Use the Silon docs connector to tell me what documentation it can look up.",
+              "tools_triggered": "get_server_instructions",
+              "expected_behavior": "Summarize the connector's public documentation scope."
+            },
+            {
+              "description": "Find the Send Message API",
+              "prompt": "Search the Silon API docs for the createMessage operation. Open the matching result and cite its source.",
+              "tools_triggered": "search, fetch",
+              "expected_behavior": "Explain the API operation and cite the public reference."
+            },
+            {
+              "description": "Discover supported SDKs",
+              "prompt": "List the SDKs and code example languages available through the Silon docs connector.",
+              "tools_triggered": "list_sdks",
+              "expected_behavior": "Report the SDKs and languages returned by the tool."
+            },
+            {
+              "description": "Get a Python SDK example",
+              "prompt": "Look up the Silon SDK's Python example for the createMessage operation and explain its inputs.",
+              "tools_triggered": "sdk_snippet",
+              "expected_behavior": "Show the documented Python example using placeholders for secrets."
+            },
+            {
+              "description": "Explain webhook documentation",
+              "prompt": "Find and open the Silon API documentation for webhook endpoints and summarize what they do.",
+              "tools_triggered": "search, fetch",
+              "expected_behavior": "Summarize webhook endpoints using a public source from the connector."
+            }
+          ],
+          "negative": [
+            {"description": "Actual message delivery", "prompt": "Use the Silon docs connector to send an SMS to my customer."},
+            {"description": "Private customer data", "prompt": "Use the Silon docs connector to list the contacts in my private Silon workspace."},
+            {"description": "Licence purchase", "prompt": "Use the Silon docs connector to buy a licence and charge my saved card."}
+          ]
+        }
+      },
       "publication": {
-        "release_notes": "Adds the packaged deployment guide, browser handoff, and marketplace listing assets."
+        "release_notes": "Bundles the public read-only Silon API documentation connector alongside the Silon Install skill."
       }
     }
   }

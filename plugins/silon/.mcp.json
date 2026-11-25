@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "silon-docs": {
+      "type": "http",
+      "url": "https://silon.tech/mcp"
+    }
+  }
+}

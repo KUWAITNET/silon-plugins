@@ -8,7 +8,7 @@
     {
       "name": "silon",
       "source": "./plugins/silon",
-      "description": "Install self-hosted Silon on a cloud VM or an existing Linux server."
+      "description": "Install self-hosted Silon and search the Silon API reference and SDK guides."
     }
   ]
 }

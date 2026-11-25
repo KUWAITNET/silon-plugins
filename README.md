@@ -4,6 +4,8 @@ The **Silon Install** skill helps you set up a self-hosted Silon messaging serve
 
 Start with “Plan a Silon trial on Google Cloud without creating resources yet.” In a chat session, the skill can prepare a browser link or commands you can run. With a terminal you authorise, it can use your existing cloud sign-in to run the Silon CLI. You complete first-owner setup and trial activation in your browser.
 
+The plugin also includes **Silon API Docs**, a public MCP connector for the API reference and SDK guides. Try “Find the Silon API documentation and a Python example for sending a message.” The connector reads public docs and requires no account or API key.
+
 In Claude Code, run `/plugin install silon --marketplace KUWAITNET/silon-plugins`.
 
 In Codex, run the following, then start a new session.
