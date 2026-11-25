@@ -1,6 +1,6 @@
 {
   "name": "silon",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Install self-hosted Silon and search the Silon API reference and SDK guides.",
   "author": {
     "name": "KUWAITNET"
@@ -71,7 +71,7 @@
         }
       },
       "publication": {
-        "release_notes": "Bundles the public read-only Silon API documentation connector alongside the Silon Install skill."
+        "release_notes": "Uses the current Silon trial terms instead of quoting a fixed trial duration."
       }
     }
   }

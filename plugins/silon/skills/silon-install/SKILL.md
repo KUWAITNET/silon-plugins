@@ -7,7 +7,7 @@ description: Install self-hosted Silon for a user on Google Cloud, AWS, Azure, o
 
 Use the bundled [deployment reference](references/deploy.md) for commands, browser handoff, and prerequisites. For version-specific questions, use the installed CLI's help and verify which options are available before proceeding.
 
-Use values the user already provided. Ask for missing details together: the provider and intended project, account, or subscription for a new VM, the region or zone, a hostname if wanted, and an email for a trusted certificate if using a domain. Use the server's bundled database by default. If the user wants a managed database, decide before the first install and consult the guide for supported options. Use the agent trial for an unlicensed install and the user's chosen licence flow for a purchased licence. The trial starts provisionally for about a week and runs for 30 days from installation once the owner activates it by email. Cloud infrastructure is billable during the trial.
+Use values the user already provided. Ask for missing details together: the provider and intended project, account, or subscription for a new VM, the region or zone, a hostname if wanted, and an email for a trusted certificate if using a domain. Use the server's bundled database by default. If the user wants a managed database, decide before the first install and consult the guide for supported options. Offer **Free trial** for an unlicensed install and the user's chosen licence flow for a purchased licence. Keep the licence option labelled **Free trial**. The owner activates the trial by email, and Silon shows the current duration during activation. Cloud infrastructure is billable during the trial.
 
 ## Choose where it runs
 
