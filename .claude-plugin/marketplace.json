@@ -1,0 +1,14 @@
+{
+  "name": "silon-plugins",
+  "owner": {
+    "name": "KUWAITNET"
+  },
+  "description": "Silon plugins from KUWAITNET.",
+  "plugins": [
+    {
+      "name": "silon",
+      "source": "./plugins/silon",
+      "description": "Install self-hosted Silon on a cloud VM or an existing Linux server."
+    }
+  ]
+}

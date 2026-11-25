@@ -1,0 +1,12 @@
+{
+  "name": "silon",
+  "version": "1.1.0",
+  "description": "Install self-hosted Silon on a cloud VM or an existing Linux server.",
+  "author": {
+    "name": "KUWAITNET"
+  },
+  "homepage": "https://silon.tech",
+  "repository": "https://github.com/KUWAITNET/silon-plugins",
+  "icon": "./assets/icon.png",
+  "keywords": ["self-hosted", "deployment", "messaging"]
+}

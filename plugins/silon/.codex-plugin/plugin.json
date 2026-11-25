@@ -1,0 +1,36 @@
+{
+  "name": "silon",
+  "version": "1.1.0",
+  "description": "Install self-hosted Silon on a cloud VM or an existing Linux server.",
+  "author": {
+    "name": "KUWAITNET"
+  },
+  "homepage": "https://silon.tech",
+  "repository": "https://github.com/KUWAITNET/silon-plugins",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Silon",
+    "shortDescription": "Install self-hosted Silon",
+    "longDescription": "Plan or install Silon on Google Cloud, AWS, Azure, or an existing Linux server. The skill prepares the appropriate installation steps and, in an authorised terminal, can run the Silon CLI after the user approves billable resources. Chat sessions without access to the target can hand off to Silon's Google Cloud deployment page or prepare commands for the user. The owner completes account setup and trial activation.",
+    "developerName": "KUWAITNET",
+    "category": "Developer Tools",
+    "capabilities": ["Plan a Silon deployment", "Guide owner setup"],
+    "websiteURL": "https://silon.tech/",
+    "supportURL": "https://online.kuwaitnet.com/submitticket.php",
+    "privacyPolicyURL": "https://silon.tech/privacy-policy/",
+    "defaultPrompt": [
+      "Plan a Silon trial on Google Cloud without creating resources yet.",
+      "Walk me through installing Silon on my existing Linux server.",
+      "Prepare the AWS CloudShell commands for a Silon trial."
+    ],
+    "logo": "./assets/icon.png",
+    "composerIcon": "./assets/icon.png"
+  },
+  "extensions": {
+    "com.openai": {
+      "publication": {
+        "release_notes": "Adds the packaged deployment guide, browser handoff, and marketplace listing assets."
+      }
+    }
+  }
+}
