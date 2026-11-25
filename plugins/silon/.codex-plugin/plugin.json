@@ -1,6 +1,6 @@
 {
   "name": "silon",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "Install self-hosted Silon and search the Silon API reference and SDK guides.",
   "author": {
     "name": "KUWAITNET"
@@ -12,7 +12,7 @@
   "interface": {
     "displayName": "Silon",
     "shortDescription": "Install Silon and use its API",
-    "longDescription": "Plan or install Silon on Google Cloud, AWS, Azure, or an existing Linux server. The installation skill can prepare Cloud Shell or SSH commands, or run the Silon CLI in an authorised terminal after the user approves billable resources. The bundled public documentation connector searches the Silon API reference and finds SDK examples. It only reads public documentation and requires no Silon account or API key.",
+    "longDescription": "Plan or install Silon on Google Cloud, AWS, Azure, or an existing Linux server. When the session can operate an authenticated terminal or a browser with Cloud Shell, the skill can run the Silon CLI after the user approves billable resources. Other sessions can prepare Cloud Shell or SSH commands. The bundled public documentation connector searches the Silon API reference and finds SDK examples. It only reads public documentation and requires no Silon account or API key.",
     "developerName": "KUWAITNET",
     "category": "Developer Tools",
     "capabilities": ["Plan a Silon deployment", "Guide owner setup", "Search Silon API documentation", "Find Silon SDK examples"],
@@ -71,7 +71,7 @@
         }
       },
       "publication": {
-        "release_notes": "Reads current setup availability from Silon's live agent guide, with Cloud Shell and SSH fallbacks."
+        "release_notes": "Uses an available interactive browser to operate Cloud Shell before offering a manual handoff."
       }
     }
   }
