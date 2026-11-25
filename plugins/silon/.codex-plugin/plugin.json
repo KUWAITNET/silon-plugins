@@ -1,6 +1,6 @@
 {
   "name": "silon",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Install self-hosted Silon and search the Silon API reference and SDK guides.",
   "author": {
     "name": "KUWAITNET"
@@ -71,7 +71,7 @@
         }
       },
       "publication": {
-        "release_notes": "Routes Google Cloud deployments through the Silon CLI and Cloud Shell while one-click deployment is paused."
+        "release_notes": "Reads current setup availability from Silon's live agent guide, with Cloud Shell and SSH fallbacks."
       }
     }
   }
